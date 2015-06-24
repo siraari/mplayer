@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FCP</title>
+<link href="css/FCP_style.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="js/mplayer.js"></script>
+</head>
+
+<body>
+
+<div id="mplayer_audio_box">
+</div><!-- /#mplayer_audio_box -->
+
+<div id="mplayer_wrap">
+<div id="mplayer_bg">
+<ul id="mplayer_button">
+<li class="mplayer_play"><img src="images/button_play.png" width="40" height="40" alt="play" /></li>
+<li class="mplayer_stop"><img src="images/button_stop.png" width="40" height="40" alt="stop" /></li>
+<li class="mplayer_pause"><img src="images/button_pause.png" width="40" height="40" alt="pause" /></li>
+</ul>
+<div id="mplayer_t_bg">
+<h2></h2>
+</div><!-- /#mplayer_t_bg-->
+</div><!-- /#mplayer_bg -->
+<div id="mplayer_form">
+<input type="file" name="input_music[]" multiple id="input_music" />
+ <input type="button" value="送信" id="form_submit" />
+</div><!-- /#mplayer_form -->
+<ol id="mplayer_mlist">
+</ol>
+
+</div><!-- /#mplayer_wrap -->
+
+
+<input type="button" value="check" id="checkState"/>
+</body>
+</html>

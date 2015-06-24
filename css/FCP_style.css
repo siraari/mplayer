@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+}
+
+#mplayer_wrap{
+	width:850px;
+	height:auto;
+	background:url(../images/mplayer_t_bg.png) no-repeat;
+	background-size:100% 100%;
+	position:relative;
+}
+#mplayer_bg{
+	width:340px;
+	height:120px;
+	background:url(../images/player_bg.png) no-repeat;
+	position:relative;
+}
+
+#mplayer_button{
+	list-style:none;
+	width:160px;
+	height:40px;
+	position:absolute;
+	top:20px;
+	left:25px;
+}
+
+#mplayer_button li{
+	display:inline;
+}
+
+#mplayer_t_bg{
+	width:145px;
+	height:55px;
+	background:url(../images/text_bg.png) no-repeat;
+	position:absolute;
+	top:30px;
+	left:165px;
+}
+#mplayer_t_bg h2{
+	color:#5b4a4a;
+	font-size:12px;
+	padding-top:5px;
+	text-align:center;
+}
+
+#mplayer_wrap ol{
+	list-style:none;
+}
+
+#mplayer_mlist{
+	color:#5b4a4a;
+	font-weight:bold;
+	margin-left:50px;
+	padding-bottom:30px;
+}
+#mplayer_form{
+	margin-left:50px;
+}
+
+#mplayer_mlist li{
+	padding-bottom:1em;
+}
