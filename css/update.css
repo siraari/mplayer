@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#main{
+	width:800px;
+	background:rgba(255,255,255,0.8);
+	padding:1em;
+}
+#main dl dt{
+	padding-top:1em;
+}
+

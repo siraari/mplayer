@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#main{
+	width:800px;
+	background:rgba(255,255,255,0.8);
+	padding:1em;
+}
+#main p.text{
+	text-indent:1em;
+}
+#main p.attention{
+	padding-top:5px;
+	font-size:12px
+}
+#main p.download{
+	padding-top:1em;
+}
+h2{
+	margin-top:1em;
+	font-size:16px;
+}
+

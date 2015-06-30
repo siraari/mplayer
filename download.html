@@ -1,0 +1,397 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Fade Control Player-ダウンロード</title>
+<link rel="shortcut icon" href="images/FCP_logo.png">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/download.css" type="text/css" media="all" />
+
+<style type="text/css">
+/* Source Code CSS */
+pre.code {
+	height:300px;
+    font-size: 12px;
+    /* line-height:1.2em; */
+    border:1px solid #aaa;
+    background:#f0f0f0;
+    padding:0.5em; 
+    overflow: auto;
+}
+pre.code span.tag		{ color: #0000ff;	}
+pre.code span.attr 		{ color: #000; 		}
+pre.code span.value		{ color: #900; 		}
+pre.code span.str 		{ color: #009900; 	}
+pre.code span.num 		{ color: #009900; 	}
+pre.code span.keyword	{ color: #0000ff; 	}
+pre.code span.rem		{ color: #909; 		}
+pre.code span.variable	{ color: #500050;	}
+</style>
+
+</head>
+
+<body>
+<div id="wrap" class="clearfix">
+<div id="header" class="clearfix">
+<div id="logo"><a href="index.html"><img src="images/FCP_logo.png" width="150" height="106" alt="FCP"></a></div>
+<h1>Fade Control Player</h1>
+</div>
+<div id="nav">
+<ul>
+<li id="nav_download"><a href="download.html"></a></li>
+<li id="nav_update"><a href="update.html"></a></li>
+<li id="nav_concept"><a href="concept.html"></a></li>
+<li id="nav_contact"><a href=""></a></li>
+</ul>
+</div>
+
+<div id="main">
+
+<p class="text">
+下記のリンクからFade Control Playerのソースコードの記述されたhtml、css、js(<b>*1</b>)ファイルや使用している素材画像がまとめられたzipファイルがダウンロードができます。<br/>
+サイトへの実装やローカル環境でのご使用、コードの変更や参考としてのご使用等ご自由にお使いください。<br/>
+</p>
+<p class="attention">
+<b>*1:</b>JavaScriptファイルの記述は「jQuery ver.1.9.0」を利用したものとなっています。(zipファイル内にも付属しています。)
+</p>
+<p class="download">
+<a href="dlFile/FCP.zip" download="FCP.zip">FCP.zip</a>
+</p>
+
+<section id="html">
+<h2>[HTML]</h2>
+<pre class="code"><span class="tag">&lt;body&gt;</span>
+
+<span class="tag">&lt;div <span class="attr">id=</span><span class="value">&quot;mplayer_audio_box&quot;</span>&gt;</span>
+<span class="tag">&lt;/div&gt;</span><span class="rem">&lt;!-- /#mplayer_audio_box --&gt;</span>
+
+<span class="tag">&lt;div <span class="attr">id=</span><span class="value">&quot;mplayer_wrap&quot;</span>&gt;</span>
+<span class="tag">&lt;div <span class="attr">id=</span><span class="value">&quot;mplayer_bg&quot;</span>&gt;</span>
+<span class="tag">&lt;ul <span class="attr">id=</span><span class="value">&quot;mplayer_button&quot;</span>&gt;</span>
+<span class="tag">&lt;li <span class="attr">class=</span><span class="value">&quot;mplayer_play&quot;</span>&gt;</span><span class="tag">&lt;img <span class="attr">src=</span><span class="value">&quot;images/button_play.png&quot;</span> <span class="attr">width=</span><span class="value">&quot;40&quot;</span> <span class="attr">height=</span><span class="value">&quot;40&quot;</span> <span class="attr">alt=</span><span class="value">&quot;play&quot;</span> /&gt;</span><span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;li <span class="attr">class=</span><span class="value">&quot;mplayer_stop&quot;</span>&gt;</span><span class="tag">&lt;img <span class="attr">src=</span><span class="value">&quot;images/button_stop.png&quot;</span> <span class="attr">width=</span><span class="value">&quot;40&quot;</span> <span class="attr">height=</span><span class="value">&quot;40&quot;</span> <span class="attr">alt=</span><span class="value">&quot;stop&quot;</span> /&gt;</span><span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;li <span class="attr">class=</span><span class="value">&quot;mplayer_pause&quot;</span>&gt;</span><span class="tag">&lt;img <span class="attr">src=</span><span class="value">&quot;images/button_pause.png&quot;</span> <span class="attr">width=</span><span class="value">&quot;40&quot;</span> <span class="attr">height=</span><span class="value">&quot;40&quot;</span> <span class="attr">alt=</span><span class="value">&quot;pause&quot;</span> /&gt;</span><span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ul&gt;</span>
+<span class="tag">&lt;div <span class="attr">id=</span><span class="value">&quot;mplayer_t_bg&quot;</span>&gt;</span>
+<span class="tag">&lt;h2&gt;</span><span class="tag">&lt;/h2&gt;</span>
+<span class="tag">&lt;/div&gt;</span><span class="rem">&lt;!-- /#mplayer_t_bg--&gt;</span>
+<span class="tag">&lt;/div&gt;</span><span class="rem">&lt;!-- /#mplayer_bg --&gt;</span>
+<span class="tag">&lt;div <span class="attr">id=</span><span class="value">&quot;mplayer_form&quot;</span>&gt;</span>
+<span class="tag">&lt;input <span class="attr">type=</span><span class="value">&quot;file&quot;</span> <span class="attr">name=</span><span class="value">&quot;input_music[]&quot;</span> <span class="value">multiple </span><span class="attr">id=</span><span class="value">&quot;input_music&quot;</span> /&gt;</span>
+ <span class="tag">&lt;input <span class="attr">type=</span><span class="value">&quot;button&quot;</span> <span class="attr">value=</span><span class="value">&quot;送信&quot;</span> <span class="attr">id=</span><span class="value">&quot;form_submit&quot;</span> /&gt;</span>
+<span class="tag">&lt;/div&gt;</span><span class="rem">&lt;!-- /#mplayer_form --&gt;</span>
+<span class="tag">&lt;ol <span class="attr">id=</span><span class="value">&quot;mplayer_mlist&quot;</span>&gt;</span>
+<span class="tag">&lt;/ol&gt;</span>
+
+<span class="tag">&lt;/div&gt;</span><span class="rem">&lt;!-- /#mplayer_wrap --&gt;</span>
+
+
+<span class="tag">&lt;input <span class="attr">type=</span><span class="value">&quot;button&quot;</span> <span class="attr">value=</span><span class="value">&quot;check&quot;</span> <span class="attr">id=</span><span class="value">&quot;checkState&quot;</span>/&gt;</span>
+<span class="tag">&lt;/body&gt;</span></pre>
+</section><!-- /#html -->
+
+<section id="css">
+<h2>[CSS]</h2>
+<pre class="code">@<span class="keyword">charset</span> <span class="str">&quot;UTF-8&quot;</span>;
+<span class="rem">/* CSS Document */</span>
+*{
+    <span class="keyword">margin</span>:<span class="num">0</span>;
+    <span class="keyword">padding</span>:<span class="num">0</span>;
+}
+
+#<span class="keyword">mplayer_wrap</span>{
+    <span class="keyword">width</span>:<span class="num">850px</span>;
+    <span class="keyword">height</span>:<span class="keyword">auto</span>;
+    <span class="keyword">background</span>:<span class="keyword">url</span>(../<span class="keyword">images</span>/<span class="keyword">mplayer_t_bg</span>.<span class="keyword">png</span>) <span class="keyword">no-repeat</span>;
+    <span class="keyword">background-size</span>:<span class="num">100%</span> <span class="num">100%</span>;
+    <span class="keyword">position</span>:<span class="keyword">relative</span>;
+}
+#<span class="keyword">mplayer_bg</span>{
+    <span class="keyword">width</span>:<span class="num">340px</span>;
+    <span class="keyword">height</span>:<span class="num">120px</span>;
+    <span class="keyword">background</span>:<span class="keyword">url</span>(../<span class="keyword">images</span>/<span class="keyword">player_bg</span>.<span class="keyword">png</span>) <span class="keyword">no-repeat</span>;
+    <span class="keyword">position</span>:<span class="keyword">relative</span>;
+}
+
+#<span class="keyword">mplayer_button</span>{
+    <span class="keyword">list-style</span>:<span class="keyword">none</span>;
+    <span class="keyword">width</span>:<span class="num">160px</span>;
+    <span class="keyword">height</span>:<span class="num">40px</span>;
+    <span class="keyword">position</span>:<span class="keyword">absolute</span>;
+    <span class="keyword">top</span>:<span class="num">20px</span>;
+    <span class="keyword">left</span>:<span class="num">25px</span>;
+}
+
+#<span class="keyword">mplayer_button</span> <span class="keyword">li</span>{
+    <span class="keyword">display</span>:<span class="keyword">inline</span>;
+}
+
+#<span class="keyword">mplayer_t_bg</span>{
+    <span class="keyword">width</span>:<span class="num">145px</span>;
+    <span class="keyword">height</span>:<span class="num">55px</span>;
+    <span class="keyword">background</span>:<span class="keyword">url</span>(../<span class="keyword">images</span>/<span class="keyword">text_bg</span>.<span class="keyword">png</span>) <span class="keyword">no-repeat</span>;
+    <span class="keyword">position</span>:<span class="keyword">absolute</span>;
+    <span class="keyword">top</span>:<span class="num">30px</span>;
+    <span class="keyword">left</span>:<span class="num">165px</span>;
+}
+#<span class="keyword">mplayer_t_bg</span> <span class="keyword">h2</span>{
+    <span class="keyword">color</span>:<span class="value">#5b4a4a</span>;
+    <span class="keyword">font-size</span>:<span class="num">12px</span>;
+    <span class="keyword">padding-top</span>:<span class="num">5px</span>;
+    <span class="keyword">text-align</span>:<span class="keyword">center</span>;
+}
+
+#<span class="keyword">mplayer_wrap</span> <span class="keyword">ol</span>{
+    <span class="keyword">list-style</span>:<span class="keyword">none</span>;
+}
+
+#<span class="keyword">mplayer_mlist</span>{
+    <span class="keyword">color</span>:<span class="value">#5b4a4a</span>;
+    <span class="keyword">font-weight</span>:<span class="keyword">bold</span>;
+    <span class="keyword">margin-left</span>:<span class="num">50px</span>;
+    <span class="keyword">padding-bottom</span>:<span class="num">30px</span>;
+}
+#<span class="keyword">mplayer_form</span>{
+    <span class="keyword">margin-left</span>:<span class="num">50px</span>;
+}
+
+#<span class="keyword">mplayer_mlist</span> <span class="keyword">li</span>{
+    <span class="keyword">padding-bottom</span>:<span class="num">1em</span>;
+}
+</pre>
+</section><!-- /#css -->
+
+<section id="js">
+<h2>[JavaScript]</h2>
+<pre class="code"><span class="rem">// JavaScript Document</span>
+
+$(<span class="keyword">function</span>(){
+    
+    <span class="keyword">var</span> input_file;<span class="rem">//送信されたオーディオファイルの配列</span>
+    <span class="keyword">var</span> file_list = <span class="keyword">new</span> Array();
+    <span class="keyword">var</span> mplayer_audio_id;<span class="rem">//再生中の&lt;audio&gt;タグのid</span>
+    <span class="keyword">var</span> mplayer_audio_id_next;<span class="rem">//次に再生される曲の&lt;audio&gt;タグのid</span>
+    <span class="keyword">var</span> audio_num;<span class="rem">//再生中のオーディオナンバー</span>
+    <span class="keyword">var</span> set_audio;<span class="rem">//再生中のオーディオエレメント</span>
+    <span class="keyword">var</span> audio_length = <span class="num">0</span>;<span class="rem">//リストの長さ</span>
+    
+    <span class="rem">//ファイル送信</span>
+    $(document).<span class="keyword">on</span>(<span class="str">&quot;click&quot;</span>,<span class="str">&quot;#form_submit&quot;</span>,<span class="keyword">function</span>(){  
+        input_file = document.getElementById(<span class="str">&quot;input_music&quot;</span>).files;<span class="rem">//送信ファイルの取得</span>
+        <span class="keyword">var</span> file_length = input_file.length;<span class="rem">//送信ファイルの数（for文で各ファイルをまわすために使用）</span>
+        
+        <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="num">0</span> ; i &lt; file_length; i++){
+            file_list[i+audio_length] = input_file[i];
+
+            <span class="keyword">var</span> file = input_file[i];
+            <span class="keyword">var</span> file_name = getFileName(file.name);
+            
+            <span class="rem">//createObjectURL作成</span>
+              <span class="keyword">var</span> tmpURL;
+              <span class="keyword">if</span> (<span class="keyword">typeof</span> file !== <span class="str">'object'</span>){<span class="keyword">return</span>;}
+              <span class="keyword">if</span> (!file.type.match(/^audio\<span class="rem">//)){return;}</span>
+              <span class="keyword">if</span> (window.createObjectURL){
+                  tmpURL = window.createObjectURL(file);
+                }<span class="keyword">else</span> <span class="keyword">if</span> (window.webkitURL){
+                      tmpURL = window.webkitURL.createObjectURL(file);
+                }<span class="keyword">else</span> <span class="keyword">if</span> (window.URL){
+                          tmpURL = window.URL.createObjectURL(file);
+                }<span class="keyword">else</span>{
+                              <span class="keyword">return</span>;
+                }
+                <span class="rem">//createObjectURL作成終了;</span>
+                
+                $(<span class="str">&quot;#mplayer_audio_box&quot;</span>).append(<span class="str">'&lt;audio src=&quot;'</span>+tmpURL+<span class="str">'&quot; id=&quot;mplayer_audio'</span>+(i+audio_length)+<span class="str">'&quot; class=&quot;audio_file'</span>+(i+audio_length+<span class="num">1</span>)+<span class="str">'&quot;&gt;&lt;/audio&gt;'</span>);<span class="rem">//送信されたファイルの&lt;audio&gt;タグの作成（#mplayer_audio_box内に）</span>
+                
+                <span class="rem">//曲のリスト作成</span>
+                $(<span class="str">&quot;#mplayer_mlist&quot;</span>).append(<span class="str">'&lt;li&gt;&lt;span class=&quot;audio_file'</span>+(i+audio_length+<span class="num">1</span>)+<span class="str">'&quot;&gt;'</span>+(i+audio_length+<span class="num">1</span>)+<span class="str">'&lt;/span&gt;.'</span>+file_name+<span class="str">'&lt;/br&gt;start:&lt;input type=&quot;text&quot; size=&quot;10&quot; placeholder=&quot;start&quot; class=&quot;mstart_time&quot; id=&quot;start_audio'</span>+(i+audio_length+<span class="num">1</span>)+<span class="str">'&quot; /&gt;stop:&lt;input type=&quot;text&quot; placeholder=&quot;stop&quot; size=&quot;10&quot; class=&quot;mstop_time&quot; id=&quot;stop_audio'</span>+(i+audio_length+<span class="num">1</span>)+<span class="str">'&quot; /&gt;fadeIn:&lt;input type=&quot;text&quot; size=&quot;10&quot; placeholder=&quot;fadeIn&quot; class=&quot;mfadeIn_time&quot; id=&quot;fadeIn_audio'</span>+(i+audio_length+<span class="num">1</span>)+<span class="str">'&quot; /&gt;fadeOut:&lt;input type=&quot;text&quot; size=&quot;10&quot; placeholder=&quot;fadeOut&quot; class=&quot;mfadeOut_time&quot; id=&quot;fadeOut_audio'</span>+(i+audio_length+<span class="num">1</span>)+<span class="str">'&quot; /&gt;nextStart:&lt;input type=&quot;text&quot; size=&quot;10&quot; placeholder=&quot;nextStart&quot; class=&quot;mnextStart_time&quot; id=&quot;nextStart_audio'</span>+(i+audio_length+<span class="num">1</span>)+<span class="str">'&quot; /&gt;&lt;/li&gt;'</span>);
+                <span class="rem">//&lt;li&gt;&lt;span c=audio_file(i+audio_length+1)&gt;&lt;start c=&quot;mstart_time&quot; id=&quot;start_audio(i+audio_length+1)&quot;&gt;以下同様    </span>
+                
+                }<span class="rem">//for終了</span>
+                
+                $(<span class="str">&quot;#mplayer_t_bg h2&quot;</span>).text(input_file[<span class="num">0</span>].name);<span class="rem">//ファイル送信終了時の再生曲のファイル名をh2に</span>
+                mplayer_audio_id = $(<span class="str">'#mplayer_audio_box audio.audio_file'</span>+(audio_length+<span class="num">1</span>)).attr(<span class="str">&quot;id&quot;</span>);<span class="rem">//再生曲目のidの取得</span>
+                audio_num = <span class="keyword">Number</span>(mplayer_audio_id.substr(<span class="num">13</span>));<span class="rem">//再生曲のidナンバー取得</span>
+                set_audio = document.getElementById(mplayer_audio_id);<span class="rem">//再生曲の&lt;audio&gt;エレメントのセット</span>
+                audio_length = document.getElementById(<span class="str">&quot;mplayer_audio_box&quot;</span>).childNodes.length - <span class="num">1</span>;<span class="rem">//送信後の曲目リストの数</span>
+                <span class="keyword">if</span>(audio_length == <span class="num">1</span>){
+                    mplayer_audio_id_next = $(<span class="str">'#mplayer_audio'</span>+(audio_num)).attr(<span class="str">&quot;id&quot;</span>);
+                }<span class="keyword">else</span>{
+                    mplayer_audio_id_next = $(<span class="str">'#mplayer_audio'</span>+(audio_num+<span class="num">1</span>)).attr(<span class="str">&quot;id&quot;</span>);<span class="rem">//次に再生する曲のid取得</span>
+                }
+
+    });<span class="rem">//ファイル送信(#form_submit click)終了</span>
+    
+    
+    <span class="rem">//曲目リストの番号クリックで再生用の曲入れ替え</span>
+    $(document).<span class="keyword">on</span>(<span class="str">&quot;click&quot;</span>,<span class="str">&quot;#mplayer_mlist li span&quot;</span>,<span class="keyword">function</span>(){
+        set_audio = document.getElementById(mplayer_audio_id);
+        set_audio.pause();<span class="rem">//曲入れ替え時に再生停止</span>
+        set_audio.currentTime = <span class="num">0</span>;
+        <span class="keyword">var</span> playAudio_class = $(<span class="keyword">this</span>).attr(<span class="str">&quot;class&quot;</span>);
+        mplayer_audio_id = $(<span class="str">'#mplayer_audio_box audio.'</span>+playAudio_class).attr(<span class="str">&quot;id&quot;</span>);
+        audio_num = <span class="keyword">Number</span>(mplayer_audio_id.substr(<span class="num">13</span>));
+        $(<span class="str">&quot;#mplayer_t_bg h2&quot;</span>).text(file_list[audio_num].name);<span class="rem">//input_file[]からファイル名を取得してh2へ挿入</span>
+        <span class="keyword">if</span>((audio_num + <span class="num">1</span>) == audio_length){
+            mplayer_audio_id_next = $(<span class="str">'#mplayer_audio0'</span>).attr(<span class="str">&quot;id&quot;</span>);
+        }<span class="keyword">else</span>{
+            mplayer_audio_id_next = $(<span class="str">'#mplayer_audio'</span>+(audio_num+<span class="num">1</span>)).attr(<span class="str">&quot;id&quot;</span>);
+        }
+    });<span class="rem">//#mplayer_mlist li.click終了</span>
+    
+    
+    <span class="rem">//再生</span>
+    $(document).<span class="keyword">on</span>(<span class="str">&quot;click&quot;</span>,<span class="str">&quot;.mplayer_play&quot;</span>,<span class="keyword">function</span> mplayer_play(){
+        set_audio = document.getElementById(mplayer_audio_id);
+        
+        <span class="keyword">var</span> audio_start_time = <span class="num">0</span>;
+        <span class="keyword">var</span> audio_fadeIn_time = <span class="num">0</span>;
+        <span class="keyword">var</span> audio_fadeOut_time = <span class="num">0</span>;
+        <span class="keyword">var</span> audio_stop_time;
+        <span class="keyword">var</span> audio_nextStart_time;
+        <span class="keyword">var</span> temp_volume;
+        
+        <span class="keyword">var</span> audio_fullTime = set_audio.duration;
+        
+        <span class="keyword">var</span> play_fileName = getFileName($(<span class="str">&quot;#mplayer_t_bg h2&quot;</span>).text());<span class="rem">//再生中画面のh2からファイル名を取得</span>
+        <span class="rem">//開始終了、フェードインアウト等の時間設定の取得</span>
+        audio_start_time = <span class="keyword">Number</span>(document.getElementById(<span class="str">&quot;start_audio&quot;</span>+(audio_num+<span class="num">1</span>)).value);
+        audio_fadeIn_time = <span class="keyword">Number</span>(document.getElementById(<span class="str">&quot;fadeIn_audio&quot;</span>+(audio_num+<span class="num">1</span>)).value);
+        audio_fadeOut_time = <span class="keyword">Number</span>(document.getElementById(<span class="str">&quot;fadeOut_audio&quot;</span>+(audio_num+<span class="num">1</span>)).value);
+        audio_stop_time = <span class="keyword">Number</span>(document.getElementById(<span class="str">&quot;stop_audio&quot;</span>+(audio_num+<span class="num">1</span>)).value);
+        audio_nextStart_time = <span class="keyword">Number</span>(document.getElementById(<span class="str">&quot;nextStart_audio&quot;</span>+(audio_num+<span class="num">1</span>)).value);
+        
+        <span class="rem">//start_time</span>
+        <span class="keyword">if</span>(set_audio.currentTime == <span class="num">0</span>){
+        set_audio.currentTime = audio_start_time;
+        }
+        
+        <span class="rem">//fadeIn_time</span>
+        <span class="keyword">if</span>(audio_fadeIn_time == <span class="str">&quot;&quot;</span>){
+            temp_volume = <span class="num">100</span>;
+            set_audio.volume = <span class="num">1</span>;
+            set_audio.play();
+        }<span class="keyword">else</span>{
+            temp_volume = <span class="num">0</span>;
+            set_audio.volume = temp_volume;
+            set_audio.play();
+            <span class="keyword">var</span> timerId_fadeIn = setInterval(<span class="keyword">function</span>(){
+                temp_volume += <span class="num">1</span>;    
+                <span class="keyword">if</span>(temp_volume &gt; <span class="num">100</span>){
+                    temp_volume = <span class="num">100</span>;
+                    set_audio.volume = <span class="num">1</span>;
+                    clearInterval(timerId_fadeIn);
+                }<span class="keyword">else</span>{
+                set_audio.volume = temp_volume/<span class="num">100</span>;
+                }
+                <span class="keyword">var</span> i = <span class="num">0</span>;
+                i += <span class="num">1</span>;
+                console.log(i);
+                console.log(temp_volume);
+            },audio_fadeIn_time*<span class="num">10</span>);
+        }
+        <span class="rem">//faseIn_time終了</span>
+        
+        <span class="rem">//stop_time</span>
+        <span class="keyword">if</span>(audio_fadeOut_time == <span class="str">&quot;&quot;</span>){
+            <span class="keyword">if</span>(audio_stop_time == <span class="str">&quot;&quot;</span>){
+                audio_stop_time = audio_fullTime;
+            }
+            set_audio.addEventListener(<span class="str">&quot;timeupdate&quot;</span>,<span class="keyword">function</span>(){
+                <span class="keyword">if</span>(set_audio.currentTime &gt;= audio_stop_time){
+                    set_audio.pause();
+                    set_audio.currentTime = <span class="num">0</span>;
+                }
+            },<span class="keyword">true</span>);
+        }<span class="keyword">else</span>{
+            <span class="keyword">if</span>(audio_stop_time == <span class="str">&quot;&quot;</span>){
+                audio_stop_time = audio_fullTime;
+            }
+            
+            <span class="keyword">var</span> event_switch = <span class="num">0</span>;
+            
+            set_audio.addEventListener(<span class="str">&quot;timeupdate&quot;</span>,fadeOut_timeupdate,<span class="keyword">true</span>);
+            set_audio.addEventListener(<span class="str">&quot;pause&quot;</span>,<span class="keyword">function</span>(){
+                set_audio.removeEventListener(<span class="str">&quot;timeupdate&quot;</span>,fadeOut_timeupdate,<span class="keyword">true</span>);
+            },<span class="keyword">true</span>);
+            <span class="keyword">function</span> fadeOut_timeupdate(){
+                <span class="keyword">if</span>(set_audio.currentTime &gt;= audio_stop_time - audio_fadeOut_time){
+                    <span class="keyword">if</span>(event_switch == <span class="num">0</span>){
+                        event_switch = <span class="num">1</span>;
+                        console.log(<span class="str">&quot;event_switch&quot;</span>);
+                        <span class="keyword">var</span> timer_fadeOut = setInterval(<span class="keyword">function</span>(){
+                            temp_volume -= <span class="num">1</span>;
+                            <span class="keyword">if</span>(temp_volume &lt; <span class="num">0</span>){
+                                console.log(temp_volume);
+                                temp_volume = <span class="num">0</span>;
+                                set_audio.volume = <span class="num">0</span>;
+                                set_audio.pause();
+                                set_audio.currentTime = <span class="num">0</span>;
+                                event_switch = <span class="num">0</span>;
+                                clearInterval(timer_fadeOut);
+                            }<span class="keyword">else</span>{
+                                set_audio.volume = temp_volume/<span class="num">100</span>;
+                            }
+                            console.log(<span class="num">1</span>);
+                        },audio_fadeOut_time*<span class="num">10</span>);
+                        temp_volume = <span class="num">100</span>;
+                    }<span class="rem">//eventswitch判断</span>
+                }
+            }<span class="rem">//関数fadeOut_timeupdate終了</span>
+            
+        }
+        <span class="rem">//stop_time終了</span>
+        
+        <span class="rem">/*
+        if(audio_nextStart_time !== &quot;&quot;){
+            set_audio.addEventListener(&quot;timeupdate&quot;,function audio_nextStart(){
+                if(set_audio.currentTime &gt;= audio_nextStart_time){
+                    set_audio.removeEventListener(&quot;timeupdate&quot;,audio_nextStart());
+                    mplayer_play();
+                    console.log(&quot;hogehoge&quot;);
+                }
+            });
+        }*/</span>
+    });
+        <span class="rem">//再生終了</span>
+
+    
+    
+    $(<span class="str">&quot;.mplayer_stop&quot;</span>).click(<span class="keyword">function</span>(){
+        <span class="keyword">var</span> set_audio = document.getElementById(mplayer_audio_id);
+        set_audio.pause();
+        set_audio.currentTime = <span class="num">0</span>;
+    });
+
+    $(<span class="str">&quot;.mplayer_pause&quot;</span>).click(<span class="keyword">function</span>(){
+        <span class="keyword">var</span> set_audio = document.getElementById(mplayer_audio_id);
+        set_audio.pause();  
+    });
+    
+        <span class="rem">//パスからファイル名を取得する関数</span>
+    <span class="keyword">function</span> getFileName(file_path) {
+        <span class="rem">// Extract a file name with the extension.</span>
+        name_ext = file_path.substring(file_path.lastIndexOf(<span class="str">&quot;/&quot;</span>)+<span class="num">1</span>, file_path.length);  
+        <span class="rem">// Extract only the name part of the file.  </span>
+        name = name_ext.substring(<span class="num">0</span>, name_ext.indexOf(<span class="str">&quot;.&quot;</span>));
+        <span class="keyword">return</span> name;
+    } 
+    
+    $(<span class="str">&quot;#checkState&quot;</span>).click(<span class="keyword">function</span>(){
+        <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="num">0</span>; i &lt; audio_length; i++){
+            console.log(file_list[i].name);
+        }
+    });
+});<span class="rem">//実行コード終了</span>
+</pre>
+</section><!-- /#js -->
+
+</div><!-- /#main -->
+
+<div id="footer">
+<small>&copy;2015 Sakaguchi Shoya</small>
+</div><!-- /#footer -->
+</div><!-- /#wrap -->
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Fade Control Player</title>
+<link rel="shortcut icon" href="images/FCP_logo.png">
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/FCP_style.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script type="text/javascript" src="js/mplayer.js"></script>
+
+</head>
+
+<body>
+<div id="wrap" class="clearfix">
+<div id="header" class="clearfix">
+<div id="logo"><a href="index.html"><img src="images/FCP_logo.png" width="150" height="106" alt="FCP"></a></div>
+<h1>Fade Control Player</h1>
+</div>
+<div id="nav">
+<ul>
+<li id="nav_download"><a href="download.html"></a></li>
+<li id="nav_update"><a href="update.html"></a></li>
+<li id="nav_concept"><a href="concept.html"></a></li>
+<li id="nav_contact"><a href=""></a></li>
+</ul>
+</div>
+
+<div id="main">
+
+<div id="mplayer_audio_box">
+</div><!-- /#mplayer_audio_box -->
+
+<div id="mplayer_wrap">
+
+<div id="mplayer_bg">
+<ul id="mplayer_button">
+<li class="mplayer_play"><img src="images/button_play.png" width="40" height="40" alt="play" /></li>
+<li class="mplayer_stop"><img src="images/button_stop.png" width="40" height="40" alt="stop" /></li>
+<li class="mplayer_pause"><img src="images/button_pause.png" width="40" height="40" alt="pause" /></li>
+</ul>
+<div id="mplayer_t_bg">
+<h2></h2>
+</div><!-- /#mplayer_t_bg-->
+</div><!-- /#mplayer_bg -->
+<div id="mplayer_form">
+<input type="file" name="input_music[]" multiple id="input_music" />
+ <input type="button" value="送信" id="form_submit" />
+</div><!-- /#mplayer_form -->
+<ol id="mplayer_mlist">
+</ol>
+
+</div><!-- /#mplayer_wrap -->
+
+<div id="description">
+<h3>[使用方法]</h3>
+<ol>
+<li>音楽ファイルを選択してもらい（複数選択可能）、送信ボタンを押すことで曲リストが作成されます。</li>
+<li>「start」が「楽曲の再生開始位置」、「stop」が「再生終了位置」、「fadeIn」が「再生開始位置からのフェードイン時間」「fadeOut」が「再生終了位置へのフェードアウト時間」に対応した項目になっています。（半角数字で秒単位入力。）入力がされていない項目はその項目に「0」が入力された状態と同様となります。</li>
+<li>２を入力してもらった状態で再生ボタンを押してもらうことで入力項目が反映された状態で楽曲の再生が行われます。</li>
+</ol>
+<p>(以下文章作成中)</p>
+</div>
+</div><!-- /#main -->
+
+<div id="footer" class="clear">
+<small>&copy;2015 Sakaguchi Shoya</small>
+</div>
+</div><!-- /#wrap -->
+
+
+</body>
+</html>
